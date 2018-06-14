@@ -6,12 +6,12 @@ namespace lab_5.context
 {
     public class MyContext : DbContext
     {
-        public MyContext (): base("MyContext")
+        public MyContext() : base("MyContext")
         {
 
         }
 
-        public DbSet<city> cities { get; set; }
+        public DbSet<Models.city> cities { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

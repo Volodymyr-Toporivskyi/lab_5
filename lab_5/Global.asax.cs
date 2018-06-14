@@ -5,7 +5,8 @@ using System.Web;
 using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
-
+using System.Data.Entity;
+using lab_5.context;
 namespace lab_5
 {
     public class MvcApplication : System.Web.HttpApplication
@@ -16,6 +17,7 @@ namespace lab_5
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            Database.SetInitializer<MyContext>(new DropCreateDatabaseIfModelChanges<MyContext>());
         }
     }
 }

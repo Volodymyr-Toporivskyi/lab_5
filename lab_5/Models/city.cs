@@ -8,8 +8,9 @@ namespace lab_5.Models
     public class city
     {
         public int id { get; set; }
-        public int country { get; set; }
-        public int region { get; set; }
-        public int name { get; set; }
+        public string name { get; set; }
+        public string country { get; set; }
+        public int population { get; set; }
+        
     }
 }
